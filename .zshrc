@@ -93,6 +93,9 @@ source $ZSH/oh-my-zsh.sh
 
 ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=fg=blue
 ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=fg=blue
+ZSH_HIGHLIGHT_STYLES[commandseparator]=fg=214
+
+#ZSH_HIGHLIGHT_STYLES[default]=none
 
 # User configuration
 
