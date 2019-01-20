@@ -45,6 +45,7 @@ python3 powerline_setup()
 python3 del powerline_setup
 set laststatus=2 " Always display the statusline in all windows
 set showtabline=2 " Always display the tabline, even if there is only one tab
+set number
 map <C-o> :NERDTreeToggle<CR>
 syntax on
 
