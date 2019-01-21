@@ -1,0 +1,252 @@
+[bar/mybar]
+monitor = ${env:MONITOR:}
+modules-right = cpu arrow1 ram arrow0 wireless arrow1 wired-network arrow0 battery arrow1 date arrow0
+modules-left = i3
+background = #222D31
+; background-0 = #FFFFFF
+radius = 10.0
+padding = 2
+font-0 = Hack Nerd Font:size=11;3
+; right arrow
+; separator = "%{T2} %{T-}"
+; left arrow
+; separator = %{T3}%{T-} :: %{T3}%{T-}
+separator = 
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+tray-position = right
+tray-detached = false
+tray-maxsize = 16
+
+[module/date]
+type = internal/date
+date = %Y-%m-%d%
+time = %H:%M
+format = <label>
+label =  %date% %time%
+; label-foreground = #9A32DB
+format-background = #16A085
+
+[module/arrow0]
+type = custom/text
+content = "%{T2}%{T-}"
+content-background = #16A085
+content-foreground = #222D31
+
+[module/arrow1]
+type = custom/text
+content = "%{T2}%{T-}"
+content-foreground = #16A085
+content-background = #222D31
+
+[module/arrow2]
+type = custom/text
+content = "%{T2}%{T-}"
+content-foreground = #b2b200
+content-background = #004c00
+
+[module/arrow3]
+type = custom/text
+content = "%{T2}%{T-}"
+content-foreground = #004c00
+content-background = #664200
+
+[module/arrow4]
+type = custom/text
+content = "%{T2}%{T-}"
+content-foreground = #664200
+content-background = #4c4cff
+
+[module/arrow5]
+type = custom/text
+content = "%{T2}%{T-}"
+content-foreground = #4c4cff
+content-background = #ff4c4c
+
+[module/arrow6]
+type = custom/text
+content = "%{T2}%{T-}"
+content-foreground = #ff4c4c
+content-background = #222D31
+
+[module/cpu]
+type = internal/cpu
+; Seconds to sleep between updates
+; Default: 1
+interval = 0.5
+format = <label> <ramp-coreload>
+format-background = #222D31
+
+label = CPU %percentage%%
+ramp-coreload-spacing = 1
+ramp-coreload-0 = ▁
+ramp-coreload-1 = ▂
+ramp-coreload-2 = ▃
+ramp-coreload-3 = ▄
+ramp-coreload-4 = ▅
+ramp-coreload-5 = ▆
+ramp-coreload-6 = ▇
+ramp-coreload-7 = █
+
+[module/ram]
+type = internal/memory
+; Seconds to sleep between updates
+; Default: 1
+interval = 3
+format = <label> 
+format-background = #16A085
+label = %gb_used%/%gb_total%
+bar-used-indicator =
+bar-used-width = 20
+bar-used-foreground-0 = #55aa55
+bar-used-foreground-1 = #557755
+bar-used-foreground-2 = #f5a70a
+bar-used-foreground-3 = #ff5555
+bar-used-fill = ▐
+bar-used-empty = ▐
+bar-used-empty-foreground = #444444
+
+
+[module/i3]
+type = internal/i3
+; Only show workspaces defined on the same output as the bar
+;
+; Useful if you want to show monitor specific workspaces
+; on different bars
+;
+; Default: false
+pin-workspaces = true
+; This will split the workspace name on ':'
+; Default: false
+strip-wsnumbers = true
+; Sort the workspaces by index instead of the default
+; sorting that groups the workspaces by output
+; Default: false
+index-sort = true
+; Create click handler used to focus workspace
+; Default: true
+enable-click = true
+; Create scroll handlers used to cycle workspaces
+; Default: true
+enable-scroll = false
+; Wrap around when reaching the first/last workspace
+; Default: true
+wrapping-scroll = false
+; Set the scroll cycle direction 
+; Default: true
+reverse-scroll = false
+; Use fuzzy (partial) matching on labels when assigning 
+; icons to workspaces
+; Example: code;♚ will apply the icon to all workspaces 
+; containing 'code' in the label
+; Default: false
+fuzzy-match = true
+label-focused = %index%
+label-focused-foreground = #ffffff
+label-focused-background = #16A085
+label-focused-underline = #fba922
+label-focused-padding = 1
+label-unfocused = %index%
+label-unfocused-padding = 1
+label-urgent = %index%
+label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+label-urgent-padding = 1
+label-visible = %index%
+label-visible-underline = #555555
+label-visible-padding = 1
+
+
+[module/battery]
+type = internal/battery
+
+; This is useful in case the battery never reports 100% charge
+full-at = 99
+
+; Use the following command to list batteries and adapters:
+; $ ls -1 /sys/class/power_supply/
+battery = BAT0
+adapter = AC
+; If an inotify event haven't been reported in this many
+; seconds, manually poll for new values.
+;
+; Needed as a fallback for systems that don't report events
+; on sysfs/procfs.
+;
+; Disable polling by setting the interval to 0.
+;
+; Default: 5
+poll-interval = 5
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-full = <ramp-capacity> <label-full>
+format-charging-background = #222D31
+format-charging-foreground = #FFFFFF
+format-discharging-background = #222D31
+format-discharging-foreground = #FFFFFF
+format-full-background = #222D31
+format-full-foreground = #FFFFFF
+
+label-charging = %percentage%%
+label-discharging = %percentage%%
+label-full = Chargé
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+
+[module/wired-network]
+type = internal/network
+interface = enp7s0
+; Seconds to sleep between updates
+; Default: 1
+interval = 3.0
+format-connected = <label-connected>
+format-connected-background = #16A085
+; format-connected =  <label-connected>
+format-packetloss = <animation-packetloss> <label-connected>
+format-disconnected = <label-disconnected>
+
+label-connected = %local_ip%
+; label-connected = 
+
+label-disconnected = no ethernet
+
+animation-packetloss-0 = ⚠
+animation-packetloss-0-foreground = #ffa64c
+animation-packetloss-1 = 📶
+animation-packetloss-1-foreground = #000000
+; Framerate in milliseconds
+animation-packetloss-framerate = 500
+
+[module/wireless]
+type = internal/network
+interface = wlp6s0
+; Seconds to sleep between updates
+; Default: 1
+interval = 3.0
+format-connected = <label-connected>
+format-connected-background = #222D31
+format-disconnected = <label-disconnected>
+format-disconnected-background = #222D31
+format-packetloss = <animation-packetloss> <label-connected>
+format-packetloss-background = #222D31
+
+label-connected = %local_ip%
+
+; label-disconnected = 
+label-disconnected = no wifi
+
+animation-packetloss-0 = ⚠
+animation-packetloss-1 = 📶
+animation-packetloss-1-foreground = #000000
+; Framerate in milliseconds
+animation-packetloss-framerate = 500
+
