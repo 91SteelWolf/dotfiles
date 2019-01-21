@@ -17,7 +17,7 @@
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel9k/powerlevel9k"
-DEFAULT_USER=julien
+DEFAULT_USER=$USER
 prompt_context(){}
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
@@ -128,6 +128,6 @@ ZSH_HIGHLIGHT_STYLES[commandseparator]=fg=214
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias config='git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+alias config='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
 export PATH="/home/julien/bin:$PATH"
