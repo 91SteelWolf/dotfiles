@@ -43,6 +43,7 @@ filetype plugin indent on    " required
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()
 python3 del powerline_setup
+let g:powerline_pycmd = "py3"
 set laststatus=2 " Always display the statusline in all windows
 set showtabline=2 " Always display the tabline, even if there is only one tab
 set number
