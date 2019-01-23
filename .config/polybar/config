@@ -4,9 +4,10 @@ modules-right = cpu arrow1 ram arrow0 wireless arrow1 wired-network arrow0 batte
 modules-left = i3
 background = #222D31
 ; background-0 = #FFFFFF
-radius = 10.0
+radius = 0.0
 padding = 2
 font-0 = Hack Nerd Font:size=11;3
+line-size = 2
 ; right arrow
 ; separator = "%{T2} %{T-}"
 ; left arrow
