@@ -129,5 +129,6 @@ ZSH_HIGHLIGHT_STYLES[commandseparator]=fg=214
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias config='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias ls="colorls"
 
 export PATH="/home/julien/bin:$PATH"
