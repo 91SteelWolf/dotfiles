@@ -24,8 +24,8 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 
 
 POWERLEVEL9K_MODE='nerdfont-complete'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator ssh os_icon ram context dir dir_writable vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status ip background_jobs history time)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon root_indicator ssh context dir dir_writable vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status ram background_jobs history time)
 POWERLEVEL9K_LINUX_ICON='\uf31c'
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX='%F{014}╭─'
