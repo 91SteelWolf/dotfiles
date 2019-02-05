@@ -131,4 +131,4 @@ ZSH_HIGHLIGHT_STYLES[commandseparator]=fg=214
 alias config='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias ls="colorls"
 
-export PATH="/home/julien/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
