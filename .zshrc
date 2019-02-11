@@ -131,4 +131,11 @@ ZSH_HIGHLIGHT_STYLES[commandseparator]=fg=214
 alias config='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias ls="colorls"
 
+if [ -d "$HOME/Tools/hashcat-5.1.0" ]; then
+	alias hashcat="$HOME/Tools/hashcat-5.1.0/hashcat64.bin"
+fi
+if [ -d "$HOME/Tools/cupp" ]; then
+	alias cupp="cd $HOME/Tools/cupp && ./cupp.py -i && cd ~"
+fi
+
 export PATH="$HOME/bin:$PATH"
