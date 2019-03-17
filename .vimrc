@@ -14,7 +14,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'python-mode/python-mode'
 Plugin 'aperezdc/vim-template'
-Plugin 'valloric/YouCompleteMe'
+" Plugin 'valloric/YouCompleteMe'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'tpope/vim-obsession'
 Plugin 'tpope/vim-eunuch'
@@ -40,9 +42,9 @@ Plugin 'tpope/vim-eunuch'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
+" python3 from powerline.vim import setup as powerline_setup
+" python3 powerline_setup()
+" python3 del powerline_setup
 let g:powerline_pycmd = "py3"
 set laststatus=2 " Always display the statusline in all windows
 set showtabline=2 " Always display the tabline, even if there is only one tab
@@ -63,6 +65,10 @@ let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
 let g:cpp_experimental_simple_template_highlight = 1
 let g:cpp_concepts_highlight = 1
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
@@ -74,3 +80,4 @@ let g:cpp_concepts_highlight = 1
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+"
