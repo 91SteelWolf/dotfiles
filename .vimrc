@@ -12,7 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
-" Plugin 'python-mode/python-mode'
+Plugin 'python-mode/python-mode'
 Plugin 'aperezdc/vim-template'
 " Plugin 'valloric/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
@@ -21,6 +21,10 @@ Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'tpope/vim-obsession'
 Plugin 'tpope/vim-eunuch'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'xolox/vim-misc' 
+Plugin 'xolox/vim-notes'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -50,6 +54,7 @@ let g:powerline_pycmd = "py3"
 set laststatus=2 " Always display the statusline in all windows
 set showtabline=2 " Always display the tabline, even if there is only one tab
 set number
+set background=dark
 map <C-o> :NERDTreeToggle<CR>
 syntax on
 set encoding=UTF-8
@@ -97,6 +102,12 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
+
+
+" Vim notes configuration
+
+let g:notes_directories = ['~/HTB/Notes']
+
 
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
